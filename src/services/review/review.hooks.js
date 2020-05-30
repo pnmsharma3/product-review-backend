@@ -5,7 +5,11 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create:   [async context => {
+      context.data.createdAt = new Date();
+
+      return context;
+    }],
     update: [],
     patch: [],
     remove: []

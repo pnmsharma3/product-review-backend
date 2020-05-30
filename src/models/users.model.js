@@ -4,9 +4,8 @@ const path = require('path');
 module.exports = function (app) {
   const dbPath = app.get('nedb');
   const Model = new NeDB({
-    filename: path.join(dbPath, 'review.db'),
-    autoload: true,
-    timestampData:true
+    filename: path.join(dbPath, 'users.db'),
+    autoload: true
   });
 
   return Model;
